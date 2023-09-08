@@ -1,0 +1,44 @@
+$font_main: 'Montserrat', sans-serif;
+
+* {
+    font-family: $font_main;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: $color_secondary;
+    text-align: center;
+    margin: 0 auto 50px 0;
+
+    @media (max-width: $lg) {
+        font-size: 26px;
+    }
+    @media (max-width: $sm) {
+        font-size: 22px;
+    }
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 125%;
+    color: $color_main;
+
+    @media (max-width: $md) {
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    @media (max-width: $xs) {
+        line-height: 150%;
+    }
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    color: $color_main;
+}

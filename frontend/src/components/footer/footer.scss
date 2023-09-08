@@ -1,0 +1,123 @@
+@import "../../styles/styles.scss";
+
+.footer {
+    background-color: $color_bg_light;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 50px 0;
+    height: fit-content;
+    margin-top: 40px;
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    &__icon {
+        font-size: 25px;
+        margin-right: 20px;
+    }
+
+
+    &__blocks {
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__block {
+
+        h5,
+        h6 {
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32.1px;
+            color: $color_tertiary;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20.8px;
+            color: $color_tertiary;
+        }
+
+        p, a {
+            font-size: 16px;
+            line-height: 30px;
+            color: $color_tertiary;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 30px;
+        color: $color_tertiary;
+        cursor: pointer;
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: 15px;
+        line-height: 20.8px;
+        color: $color_tertiary;
+        margin-top: 40px;
+        opacity: 0.8;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+
+        a:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+
+@media (max-width: $sm) {
+    .footer {
+        padding: 80px 0 50px 0;
+
+        &__blocks {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &__block {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .footer {
+        &__blocks {
+            width: 85%;
+        }
+    }
+}
+
+@media (max-width: $sm) {
+    .footer {
+        &__blocks {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,183 @@
+@import "../../styles/styles.scss";
+
+.rates {
+    &__discounts {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__block {
+        color: $color_main;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid $color_light_lines;
+        border-radius: 10px;
+        padding: 30px;
+
+        h3 {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 30px;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        &_1 {
+            width: 52%;
+        }
+
+        &_2 {
+            width: 44%;
+
+            p {
+                margin-bottom: 30%;
+            }
+        }
+
+    }
+
+    &__image {
+        object-fit: contain;
+        width: 60%;
+        margin-right: 30px;
+    }
+
+    &__info {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+
+        .rates__price {
+            margin-right: 15px;
+        }
+    }
+
+    &__price {
+        white-space: nowrap;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 30px;
+        color: $color_main;
+
+        &_old {
+            color: rgba(255, 255, 240, 0.70);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 30px;
+            text-decoration: line-through;
+        }
+    }
+
+    &__options {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin-top: 40px;
+
+        h4 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 0.46px;
+            white-space: nowrap;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        h5 {
+            margin: 20px 0;
+        }
+
+        .rates__block {
+            width: 30%;
+            padding: 40px 30px 40px 50px;
+        }
+    }
+
+    &__button {
+        margin-top: 20px;
+        @include primary-button(18px);
+    }
+}
+
+
+@media (max-width: $lg) {
+    .rates {
+        &__discounts {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__options {
+            flex-direction: column;
+    
+            .rates__block {
+                width: 100%;
+                padding: 40px 30px 40px 50px;
+            }
+        }
+
+        &__block {
+            width: 100%;
+            margin-bottom: 30px;
+
+            &_1 {
+                .rates__prices, button, span {
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                .rates__price {
+                    margin: 0;
+                }
+
+                button {
+                    margin-top: 20px;
+                }
+            }
+
+            &_2 {
+                width: 100%;
+
+                p {
+                    margin: 30px 0;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+
+        
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+@media (max-width: $xs) {
+    .rates {
+    }
+}

@@ -1,0 +1,144 @@
+@import "../../styles/styles.scss";
+
+.photos {
+    &__blocks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+
+    &__block {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__image {
+        object-fit: contain;
+
+        &_vertical {
+            width: 18%;
+        }
+        &_horizontal {
+            width: 40%;
+        }
+    }
+
+    &__text {
+        p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        &_1 {
+            width: 12%;
+            text-align: center;
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        &_2 {
+            width: 32%;
+        }
+
+        &_3 {
+            width: 55%;
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__button {
+        @include primary-button(16px);
+    }
+
+}
+
+
+@media (max-width: $sm) {
+    .photos {
+        &__image {
+            object-fit: contain;
+    
+            &_vertical {
+                width: 160px;
+            }
+            &_horizontal {
+                width: 100%;
+            }
+        }
+
+        &__text {
+            p {
+                font-size: 16px;
+            }
+    
+            &_1 {
+                width: 40%;
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+    
+            &_2 {
+                width: 50%;
+                margin-left: -30px;
+            }
+    
+            &_3 {
+                width: 70%;
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: $xs) {
+    .photos {
+        &__image {
+            object-fit: contain;
+    
+            &_vertical {
+                width: 150px;
+            }
+            &_horizontal {
+                width: 100%;
+            }
+        }
+
+        &__text {
+            p {
+                font-size: 16px;
+            }
+    
+            &_1 {
+                width: 40%;
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+    
+            &_2 {
+                width: 50%;
+                margin-left: -30px;
+            }
+    
+            &_3 {
+                width: 70%;
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

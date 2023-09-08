@@ -1,0 +1,82 @@
+@import "../../styles/styles.scss";
+
+.forWhom {
+    margin-top: 100px;
+
+    &__photos {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        width: 20%;
+        height: 500px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        p {
+            font-size: 25px;
+            font-weight: 800;
+            line-height: normal;
+            letter-spacing: 0.6px;
+            color: $color_main;
+        }
+
+        &_1 {
+            background: url(../../assets/images/forWhom1.jpg) no-repeat 65% 0%;
+            background-size: cover;
+            background-color: $background-shadow;
+            background-blend-mode: overlay;
+        }
+        &_2 {
+            background: url(../../assets/images/forWhom2.jpg) no-repeat 100% center;
+            background-size: cover;
+            background-color: $background-shadow;
+            background-blend-mode: overlay;
+        }
+        &_3 {
+            background: url(../../assets/images/forWhom3.jpg) no-repeat top center;
+            background-size: cover;
+            background-color: $background-shadow;
+            background-blend-mode: overlay;
+        }
+        &_4 {
+            background: url(../../assets/images/forWhom4.jpg) no-repeat top center;
+            background-size: cover;
+            background-color: $background-shadow;
+            background-blend-mode: overlay;
+            p {
+                text-decoration-line: underline;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: $lg) {
+    .forWhom {
+        height: fit-content;
+        p {
+            font-size: 22px;
+        }
+        &__img {
+            width: 45%;
+            height: 350px;
+            border-radius: 12px;
+
+            &_2 {
+                background: url(../../assets/images/forWhom2.jpg) no-repeat 80% center;
+                background-size: cover;
+                background-color: $background-shadow;
+                background-blend-mode: overlay;
+            }
+        }
+    }
+}

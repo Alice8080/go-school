@@ -1,0 +1,112 @@
+@import "../../styles/styles.scss";
+
+.description {
+    &__blocks {
+        display: -ms-grid;
+        display: grid;
+        justify-content: space-between;
+        align-content: space-between;
+        width: 100%;
+        grid-template: 46% 46% / 40% 40%;
+        grid-template-areas: "b1 b2"
+            "b3 b4";
+    }
+
+    &__block {
+        border: 1px solid $color_light_lines;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 30px 50px 30px;
+
+        &_1 {
+            grid-area: b1;
+        }
+
+        &_2 {
+            grid-area: b2;
+            margin: 0 0 0 auto;
+        }
+
+        &_3 {
+
+            grid-area: b3;
+        }
+
+        &_4 {
+            grid-area: b4;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 130%;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 0.46px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 30px;
+        }
+
+    }
+
+    &__button {
+        margin-top: 20px;
+        @include primary-button(18px);
+        width: fit-content;
+    }
+
+    img {
+        object-fit: contain;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: $lg) {
+    .description {
+        &__blocks {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__block {
+            border: 1px solid $color_light_lines;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 30px 50px 30px;
+            margin-bottom: 30px;
+
+            &_2 {
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        img {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+
+@media (max-width: $xs) {
+    .description {
+    }
+}

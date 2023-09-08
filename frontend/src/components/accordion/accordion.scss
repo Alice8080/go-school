@@ -1,0 +1,35 @@
+@import "../../styles/styles.scss";
+
+.accordion {
+    font-family: Montserrat;
+    &-header {
+        border-radius: 10px 10px 0 0;
+        border-color: #fcfcfc4d;
+    }
+
+    &-item {
+        border-color: #fcfcfc8f;
+        background-color: $color_bg;
+        color: $color_main;
+    }
+    &-body {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.accordion-header, .accordion-button, .accordion-button:not(.collapsed) {
+    background-color: #212121;
+    color: $color_main;
+    font-weight: 500;
+}
+
+.accordion-button::after, .accordion-button:not(.collapsed)::after {
+    background-image: url(../../assets/images/arrow-down.png);
+}
+
+.accordion-button, .accordion-button:not(.collapsed), .accordion-button:focus {
+    z-index: 3; 
+    border-color: none;
+    box-shadow: 0 0 0 1px $color_light_lines;
+}

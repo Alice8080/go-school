@@ -1,0 +1,93 @@
+@import "../../styles/styles.scss";
+
+.contacts {
+    margin-bottom: 100px;
+
+    h2 {
+        margin-bottom: 70px;
+    }
+
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-items: stretch;
+    }
+
+    &__block {
+        width: 50%;
+        border: 1px solid $color_light_lines;
+        border-radius: 10px;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h3,
+        h4,
+        h5 {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: $color_main;
+        }
+
+        h4 {
+            margin: 30px 0;
+        }
+    }
+
+    img {
+        object-fit: contain;
+        width: 40%;
+    }
+
+    a {
+        color: $color_main;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__icon {
+        font-size: 35px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: $lg) {
+    .contacts {
+        margin-bottom: 40px;
+
+        &__blocks {
+            flex-direction: column;
+
+            h3,
+            h4,
+            h5 {
+                font-size: 17px;
+                line-height: 25px;
+            }
+
+        }
+
+        &__block {
+            margin-top: 30px;
+            width: 100%;
+            padding: 40px 30px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $xs) {
+    .contacts {
+        margin-top: -50px;
+        padding-top: 0;
+        margin-bottom: 50px;
+    }
+}

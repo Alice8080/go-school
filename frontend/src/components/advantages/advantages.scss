@@ -1,0 +1,47 @@
+@import "../../styles/styles.scss";
+
+.advantages {
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__accordion {
+        width: 60%;
+    }
+
+    img {
+        object-fit: contain;
+        width: 30%;
+    }
+}
+
+@media (max-width: $lg) {
+    .advantages {
+        &__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__accordion {
+            margin-top: 40px;
+            width: 90%;
+        }
+
+        img {
+            object-fit: contain;
+            width: 50%;
+        }
+    }
+}
+
+
+@media (max-width: $xs) {
+    .advantages {
+        img {
+            object-fit: contain;
+            width: 70%;
+        }
+    }
+}

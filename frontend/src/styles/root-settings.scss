@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: $color_bg;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    background-color: unset;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+
+ol {
+    padding-left: 2rem;
+}
+
+img {
+    vertical-align: top;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    justify-content: center;
+    align-content: space-between;
+    grid-template: minmax(100px, auto) 1fr minmax(60px, 80px)/1fr;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+}
+
+
+@media (max-width: $md) {
+    .main {
+        grid-area: main;
+        margin: 0 auto;
+        width: 85%;
+    }
+}
+
+@media (max-width: $sm) {
+    .main {
+        grid-area: main;
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+.section {
+    margin-top: 270px;
+}
+
+@media (max-width: $lg) {
+    .section {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: $md) {
+    .section {
+        margin-top: 110px;
+    }
+}
+
+@media (max-width: $xs) {
+    .section {
+        margin-top: 90px;
+    }
+}
